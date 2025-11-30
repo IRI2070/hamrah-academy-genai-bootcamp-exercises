@@ -1,0 +1,1 @@
+# hamrah-academy-genai-bootcamp-exercises
