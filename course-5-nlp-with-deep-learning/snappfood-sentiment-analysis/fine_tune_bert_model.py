@@ -4,18 +4,13 @@ import numpy as np
 import evaluate
 
 dataset = load_dataset("ParsiAI/snappfood-sentiment-analysis")
-
 tokenizer = AutoTokenizer.from_pretrained("PartAI/TookaBERT-Large")
 model = AutoModelForSequenceClassification.from_pretrained("PartAI/TookaBERT-Large", num_labels=2)
+accuracy = evaluate.load("accuracy")
 
 
 def tokenize_function(example):
     return tokenizer(example["comment"], truncation=True, padding="max_length", max_length=512)
-
-
-tokenized_datasets = dataset.map(tokenize_function, batched=True)
-
-accuracy = evaluate.load("accuracy")
 
 
 def compute_metrics(eval_pred):
@@ -23,6 +18,8 @@ def compute_metrics(eval_pred):
     predictions = np.argmax(logits, axis=-1)
     return accuracy.compute(predictions=predictions, references=labels)
 
+
+tokenized_datasets = dataset.map(tokenize_function, batched=True)
 
 training_args = TrainingArguments(
     output_dir="./results",
