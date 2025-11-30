@@ -5,11 +5,11 @@
 
 ## 📂 ساختار مخزن
 تسک های هر دوره یا کلاس در یک پوشه‌ی جداگانه قرار گرفته است. درون هر پوشه، کدهای پایتون مربوط به تمرین‌ها و پروژه‌ها موجود است.  
-- [دوره ۱: برنامه نوسی پیشرفته پایتون](course-1-advanced-python-programming/.)  
-- [دوره ۲: یادگیری ماشین نظارت شده](course-2-supervised-machine-learning/.)  
-- [دوره ۳: یادگیری ماشین بدون نظارت](course-3-unsupervised-machine-learning/.)  
-- [دوره ۴: یادگیری عمیق](course-4-deep-learning/.)  
-- [دوره ۵: پردازش زبان طبیعی با یادگیری عمیق](course-5-nlp-with-deep-learning/.)
+- [دوره 1: برنامه نوسی پیشرفته پایتون](course-1-advanced-python-programming/.)  
+- [دوره 2: یادگیری ماشین نظارت شده](course-2-supervised-machine-learning/.)  
+- [دوره 3: یادگیری ماشین بدون نظارت](course-3-unsupervised-machine-learning/.)  
+- [دوره 4: یادگیری عمیق](course-4-deep-learning/.)  
+- [دوره 5: پردازش زبان طبیعی با یادگیری عمیق](course-5-nlp-with-deep-learning/.)
 - [دوره 6: هوش مصنوعی مولد با رویکرد مدل های زبانی بزرگ](course-6-genai-and-llms/.)
 
 ## 🌐 درباره بوت‌کمپ
