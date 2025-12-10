@@ -2,3 +2,4 @@ evaluate
 datasets
 tokenizers
 transformers
+scikit-learn
