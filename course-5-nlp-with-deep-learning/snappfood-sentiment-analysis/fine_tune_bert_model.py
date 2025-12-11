@@ -92,8 +92,6 @@ tokenizer.save_pretrained("./tooka-bert-large-snappfood-sentiment")
 #   train_samples            =      33818
 #   train_samples_per_second =      4.965
 #   train_steps_per_second   =      0.497
-
-
 # ***** eval metrics *****
 #   epoch                   =        3.0
 #   eval_accuracy           =     0.9996
@@ -102,3 +100,21 @@ tokenizer.save_pretrained("./tooka-bert-large-snappfood-sentiment")
 #   eval_samples            =       5057
 #   eval_samples_per_second =     18.692
 #   eval_steps_per_second   =       2.34
+
+# ParsiAI/snappfood-sentiment-analysis
+# ***** train metrics *****
+#   epoch                    =         3.0
+#   total_flos               = 135683296GF
+#   train_loss               =      0.3202
+#   train_runtime            =  8:40:18.19
+#   train_samples            =       52110
+#   train_samples_per_second =       5.008
+#   train_steps_per_second   =       0.501
+# ***** eval metrics *****
+#   epoch                   =        3.0
+#   eval_accuracy           =     0.8793
+#   eval_loss               =     0.3681
+#   eval_runtime            = 0:07:17.08
+#   eval_samples            =       8337
+#   eval_samples_per_second =     19.074
+#   eval_steps_per_second   =      2.386
