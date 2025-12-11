@@ -1,35 +1,72 @@
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from transformers import (
+    AutoTokenizer,
+    AutoModelForSequenceClassification,
+    TrainingArguments,
+    Trainer,
+)
+from sklearn.metrics import accuracy_score, f1_score
 import numpy as np
-import evaluate
 
-dataset = load_dataset("ParsiAI/snappfood-sentiment-analysis")
+raw_datasets = load_dataset("IRI2070/snappfood-refined-sentiment-dataset")
+
+
+def fix_labels(example):
+    label = example["label_id"]
+    example["labels"] = int(label)
+    return example
+
+
+raw_datasets = raw_datasets.map(fix_labels, remove_columns=["label_id", "label"])
+
 tokenizer = AutoTokenizer.from_pretrained("PartAI/TookaBERT-Large")
-model = AutoModelForSequenceClassification.from_pretrained("PartAI/TookaBERT-Large", num_labels=2)
-accuracy = evaluate.load("accuracy")
 
 
-def tokenize_function(example):
-    return tokenizer(example["comment"], truncation=True, padding="max_length", max_length=512)
+def tokenize_function(examples):
+    return tokenizer(
+        examples["comment"],
+        truncation=True,
+        padding=False,
+        max_length=512,
+    )
+
+
+tokenized_datasets = raw_datasets.map(
+    tokenize_function,
+    batched=True,
+)
+
+model = AutoModelForSequenceClassification.from_pretrained(
+    "PartAI/TookaBERT-Large",
+    num_labels=2,
+)
 
 
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
-    predictions = np.argmax(logits, axis=-1)
-    return accuracy.compute(predictions=predictions, references=labels)
+    preds = np.argmax(logits, axis=1)
+    return {
+        "accuracy": accuracy_score(labels, preds),
+        "f1": f1_score(labels, preds, average="weighted"),
+    }
 
-
-tokenized_datasets = dataset.map(tokenize_function, batched=True)
 
 training_args = TrainingArguments(
-    output_dir="./results",
-    evaluation_strategy="epoch",
-    save_strategy="epoch",
-    learning_rate=2e-5,
+    output_dir="./bert-sentiment-finetuned",
+    num_train_epochs=3,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
-    num_train_epochs=3,
+    eval_strategy="epoch",
+    save_strategy="epoch",
+    logging_dir="./bert-sentiment-finetuned/logs",
+    load_best_model_at_end=True,
+    metric_for_best_model="f1",
+    greater_is_better=True,
+    learning_rate=2e-5,
     weight_decay=0.01,
+    fp16=True,
+    seed=42,
+    report_to="none",
 )
 
 trainer = Trainer(
@@ -43,6 +80,25 @@ trainer = Trainer(
 
 trainer.train()
 
-trainer.evaluate(tokenized_datasets["test"])
+trainer.save_model("./bert-sentiment-finetuned")
+tokenizer.save_pretrained("./bert-sentiment-finetuned")
 
-trainer.save_model("./tooka-bert-large-snappfood-sentiment")
+# IRI2070/snappfood-refined-sentiment-dataset
+# ***** train metrics *****
+#   epoch                    =        3.0
+#   total_flos               = 88054840GF
+#   train_loss               =     0.0406
+#   train_runtime            = 5:40:32.94
+#   train_samples            =      33818
+#   train_samples_per_second =      4.965
+#   train_steps_per_second   =      0.497
+
+
+# ***** eval metrics *****
+#   epoch                   =        3.0
+#   eval_accuracy           =     0.9996
+#   eval_loss               =     0.0033
+#   eval_runtime            = 0:04:30.54
+#   eval_samples            =       5057
+#   eval_samples_per_second =     18.692
+#   eval_steps_per_second   =       2.34
