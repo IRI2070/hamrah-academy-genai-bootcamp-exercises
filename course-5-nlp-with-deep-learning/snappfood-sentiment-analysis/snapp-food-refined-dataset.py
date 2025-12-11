@@ -138,9 +138,9 @@ final_dataset_dict = DatasetDict(cleaned_deduplicated_datasets)
 for split_name in final_dataset_dict.keys():
     final_dataset_dict[split_name] = final_dataset_dict[split_name].shuffle(seed=42)
 
-final_dataset_dict.save_to_disk("snappfood-refined-sentiment-dataset-v6")
+final_dataset_dict.save_to_disk("snappfood-refined-sentiment-dataset")
 
-loaded_dataset = DatasetDict.load_from_disk("/content/drive/MyDrive/snappfood-refined-sentiment-dataset-v6")
+loaded_dataset = DatasetDict.load_from_disk("snappfood-refined-sentiment-dataset")
 repo_id = "<user_name>/snappfood-refined-sentiment-dataset"
 
 loaded_dataset.push_to_hub(repo_id, token="hf_XXXXXXXXXXXXXXXXXXXXXXXX")
