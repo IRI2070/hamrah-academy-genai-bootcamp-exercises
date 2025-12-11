@@ -8,7 +8,7 @@ seen = set()
 
 with open(output_file, "w", newline="", encoding="utf-8") as outfile:
     writer = csv.writer(outfile)
-    writer.writerow(["original_word", "example", "rule"])
+    writer.writerow(["candidate", "registered", "label"])
 
     with open(input_file, "r", encoding="utf-8") as infile:
         for line in infile:

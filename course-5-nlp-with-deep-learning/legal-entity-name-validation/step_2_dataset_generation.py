@@ -49,6 +49,8 @@ Your task is to produce a JSON object with the following structure:
 8. adjective_removal → حذف صفت یا توصیف‌کننده از نام شرکت (صنایع غذایی میهن ↔ صنایع میهن)
 9. morphological_variation → تفاوت صرفی یا تغییر کوچک در شکل واژه (غذایی ↔ غذای، میهن ↔ مهین)
 10. word_removal → حذف کامل یک یا چند کلمه از نام شرکت (صنایع غذایی میهن ↔ غذایی میهن)
+11. minor_spelling_variations → تغییر جزئی در املاء یا نوشتار (صنایع غذایی مهین ↔ صنایع غذایی میهن)
+12. abbreviation_shortening → استفاده از مخفف یا کوتاه‌سازی (فناوری برتر تهران ↔ فن برتر تهران)
 
 ### Example:
 
@@ -68,7 +70,9 @@ Output:
     { "rule": "activity_change", "example": "صنایع لبنی میهن" },
     { "rule": "adjective_removal", "example": "صنایع میهن" },
     { "rule": "morphological_variation", "example": "صنایع غذای میهن" },
-    { "rule": "word_removal", "example": "غذایی میهن" }
+    { "rule": "word_removal", "example": "غذایی میهن" },
+    { "rule": "minor_spelling_variations", "example": "صنایع غذایی مهین" },
+    { "rule": "abbreviation_shortening", "example": "صنعت غذای میهن" }
   ],
   "hard_positive_examples": [
     "صنایع دارویی میهن",
