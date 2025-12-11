@@ -80,8 +80,8 @@ trainer = Trainer(
 
 trainer.train()
 
-trainer.save_model("./bert-sentiment-finetuned")
-tokenizer.save_pretrained("./bert-sentiment-finetuned")
+trainer.save_model("./tooka-bert-large-snappfood-sentiment")
+tokenizer.save_pretrained("./tooka-bert-large-snappfood-sentiment")
 
 # IRI2070/snappfood-refined-sentiment-dataset
 # ***** train metrics *****
