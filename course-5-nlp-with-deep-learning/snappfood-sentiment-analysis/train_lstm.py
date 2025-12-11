@@ -5,7 +5,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
 from datasets import load_dataset
 
-dataset = load_dataset("ParsiAI/snappfood-sentiment-analysis")
+dataset = load_dataset("ParsiAI/snappfood-refined-sentiment-dataset")
 
 train_texts, train_labels = dataset["train"]["comment"], dataset["train"]["label_id"]
 val_texts, val_labels = dataset["validation"]["comment"], dataset["validation"]["label_id"]

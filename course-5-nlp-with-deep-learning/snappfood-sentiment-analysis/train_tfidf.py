@@ -5,7 +5,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score, log_loss
 
-dataset = load_dataset("ParsiAI/snappfood-sentiment-analysis")
+dataset = load_dataset("ParsiAI/snappfood-refined-sentiment-dataset")
 
 train_texts = dataset["train"]["comment"]
 train_labels = dataset["train"]["label_id"]
