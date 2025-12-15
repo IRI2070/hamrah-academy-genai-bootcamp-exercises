@@ -33,3 +33,5 @@ def search(query, top_k=10, threshold=0.70):
         hits[idx]["rules"] = rules_mapping[_argmax]
         hits[idx]["name"] = registered_names[hits[idx]["corpus_id"]]
     print(hits)
+
+search("آتیه سازان فردا")
