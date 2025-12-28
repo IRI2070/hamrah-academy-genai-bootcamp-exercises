@@ -4,5 +4,5 @@
   <img src="https://placehold.co/800x120/orange/white/png?text=My+Awesome+Project" alt="Project Header" />
 </div>
 <div align="center">
-  <img src="https://img.shields.io/badge/My%20Awesome%20Project-FF9500?style=for-the-badge&logo=appveyor&logoColor=white" alt="Project Name" />
+  <img src="https://img.shields.io/badge/my-FF9500?style=for-the-badge&logo=appveyor&logoColor=white" alt="Project Name" />
 </div>
