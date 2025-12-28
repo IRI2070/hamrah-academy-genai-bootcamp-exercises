@@ -23,3 +23,7 @@
     پروژه من
   </text>
 </svg>
+
+<div align="center">
+  <img src="https://github.com/USERNAME/REPO/raw/main/header.svg" alt="پروژه من" />
+</div>
