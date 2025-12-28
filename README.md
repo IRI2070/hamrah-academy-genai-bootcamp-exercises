@@ -17,13 +17,13 @@
 بوت‌کمپ هوش مصنوعی مولد آکادمی همراه اول در پاییز 1404 در حال برگزاری است و شامل مجموعه‌ای از دوره‌های تخصصی در زمینه‌ی **یادگیری عمیق، مدل‌های زبانی بزرگ، پردازش زبان طبیعی، و مدل‌های تولیدی تصویر** است. این مخزن بازتابی از مسیر یادگیری و تمرین‌های عملی در این بوت‌کمپ است. سپاس از تیم آکادمی همراه اول 🙏
 
 
-<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+
+
+<div align="center">
+  <svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#FF9500"/>
   <text x="50%" y="60%" font-family="Vazir, sans-serif" font-size="40" fill="white" text-anchor="middle" direction="rtl">
     پروژه من
   </text>
-</svg>
-
-<div align="center">
-  <img src="https://github.com/USERNAME/REPO/raw/main/header.svg" alt="پروژه من" />
+  </svg>
 </div>
