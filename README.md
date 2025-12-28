@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" dir="rtl">
   <img src="https://github.com/IRI2070/hamrah-academy-genai-bootcamp-exercises/raw/main/header.svg" alt="پروژه من" />
 </div>
 
