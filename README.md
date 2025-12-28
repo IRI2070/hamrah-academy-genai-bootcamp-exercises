@@ -1,9 +1,19 @@
-<div align="center">
-  <img src="https://img.shields.io/badge/خوش%20آمدید-FF9500?style=for-the-badge&logo=appveyor&logoColor=white" alt="Project Name" />
+<div dir="rtl" align="center">
+
+![پروژه من](https://img.shields.io/badge/پروژه_من-FF9500?style=for-the-badge&logo=appveyor&logoColor=white)
+
+![نسخه ۱.۰.۰](https://img.shields.io/badge/نسخه_۱.۰.۰-00C853?style=for-the-badge)
+
+![مجوز MIT](https://img.shields.io/badge/مجوز_MIT-4285F4?style=for-the-badge)
+
 </div>
-![پروژه من](https://img.shields.io/badge/پروژه_من-4285F4?style=for-the-badge)
-<div align="center">
-  <img src="https://img.shields.io/badge/Welcome%20to%20My%20Project-FF8C00?style=for-the-badge" alt="Welcome" />
+
+<div dir="rtl">
+
+# خوش آمدید!
+
+این پروژه به زبان فارسی نوشته شده است...
+
 </div>
 
 # 🚀 بوت‌کمپ هوش مصنوعی مولد - پاییز 1404
