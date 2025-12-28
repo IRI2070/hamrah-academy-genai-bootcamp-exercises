@@ -1,21 +1,3 @@
-<div dir="rtl" align="center">
-
-![پروژه من](https://img.shields.io/badge/پروژه_من-FF9500?style=for-the-badge&logo=appveyor&logoColor=white)
-
-![نسخه ۱.۰.۰](https://img.shields.io/badge/نسخه_۱.۰.۰-00C853?style=for-the-badge)
-
-![مجوز MIT](https://img.shields.io/badge/مجوز_MIT-4285F4?style=for-the-badge)
-
-</div>
-
-<div dir="rtl">
-
-# خوش آمدید!
-
-این پروژه به زبان فارسی نوشته شده است...
-
-</div>
-
 # 🚀 بوت‌کمپ هوش مصنوعی مولد - پاییز 1404
 
 این مخزن شامل تمرین‌ها و تسک‌های کدنویسی مربوط به **بوت‌کمپ هوش مصنوعی مولد آکادمی همراه اول** در پاییز 1404 است.  
