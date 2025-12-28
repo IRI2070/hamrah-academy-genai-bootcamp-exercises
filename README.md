@@ -1,3 +1,11 @@
+<div align="center">
+  <img src="https://img.shields.io/badge/خوش%20آمدید-FF9500?style=for-the-badge&logo=appveyor&logoColor=white" alt="Project Name" />
+</div>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Welcome%20to%20My%20Project-FF8C00?style=for-the-badge" alt="Welcome" />
+</div>
+
 # 🚀 بوت‌کمپ هوش مصنوعی مولد - پاییز 1404
 
 این مخزن شامل تمرین‌ها و تسک‌های کدنویسی مربوط به **بوت‌کمپ هوش مصنوعی مولد آکادمی همراه اول** در پاییز 1404 است.  
