@@ -5,15 +5,18 @@ from src.utils.logger import logger
 
 class SearchKnowledgeBase(Tool):
     name = "search_knowledge_base"
-    description = "Semantic search in the Persian drug database and return related texts. Note that each drug can include the following information: English name of the drug, Persian name of the drug, indications for use, mechanism of action, contraindications, pharmacokinetics, warnings, side effects, drug interactions, recommended tips, dosage, pharmaceutical forms, product ingredients, active ingredients, drug interactions."
+    description = "Semantic search over the knowledge base. Returns the most relevant document excerpts."
     inputs = {
         "query": {
             "type": "string",
-            "description": "The query to perform. This should be semantically close to your target documents. Use the affirmative form rather than a question.",
+            "description": "Search query in affirmative form – use descriptive, natural language.",
         },
         "top_k": {
             "type": "integer",
-            "description": "Number of documents to be returned. If the question is about a specific drug, one document should be returned because each drug has only one document, otherwise this number should be adjusted depending on the type of question. For example, for drug prescription, drug comparison, interactions, and the like, this number should definitely be greater than one.",
+            "description": (
+                "How many results to return. Usually 1 for questions about a single specific entity; "
+                "3–8 for comparisons, multiple examples, interactions, overviews or broader questions."
+            ),
         }
     }
     output_type = "string"
