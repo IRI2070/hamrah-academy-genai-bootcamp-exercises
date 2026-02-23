@@ -7,7 +7,8 @@
 - BALE_TOKEN
 
 برای دریافت توکن پیام رسان بله از طریق بازوی botfather@ اقدام کنید
-
+چانک ها را که هر کدام باید یک فایل txt باشد داخل پوشه chunks قرار دهید
 از طریق فایل requirements.txt پیش نیازها را نصب کنید و فایل bot.py را اجرا کنید
+برای تست ابتدایی برنامه فایل course-9-final-project/evaluation/testset.csv را تکمیل کنید
 
 </div>

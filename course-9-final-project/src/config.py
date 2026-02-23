@@ -20,7 +20,7 @@ class Config:
     FINAL_K = 10
 
     FAISS_DIRECTORY_PATH = BASE_DIR / "artifacts/faiss_index"
-    CHUNKS_DIRECTORY = BASE_DIR / 'data/Iran-Pharma-89'
+    CHUNKS_DIRECTORY = BASE_DIR / 'chunks'
     TESTCASE_CSV_PATH = BASE_DIR / 'evaluation/testset.csv'
 
     AGENT_MAX_STEPS = 5

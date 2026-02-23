@@ -37,11 +37,11 @@ testcases_df = pd.read_csv(filepath_or_buffer=config.TESTCASE_CSV_PATH, encoding
 
 test_cases = []
 for index, golden in testcases_df.iterrows():
-    # answer = generate_answer(golden.input, return_full_result=False)
+    answer = generate_answer(golden.input, return_full_result=False)
     test_case = LLMTestCase(
         input=golden.input,
-        # actual_output=answer,
-        actual_output=golden.actual_output,
+        actual_output=answer,
+        # actual_output=golden.actual_output,
         expected_output=golden.expected_output
     )
     test_cases.append(test_case)
