@@ -1,6 +1,6 @@
 <div dir="rtl">
 
-# بازوی اطلاعات دارویی در پیام رسان بله
+# چت بات عمومی در پیام رسان بله
 
 برای اجرای برنامه تتها کافی است دو کلید زیر را در متغیرهای محلی سیستم عامل تنظیم کنید:
 - AVALAI_API_KEY
@@ -13,5 +13,7 @@
 از طریق فایل requirements.txt پیش نیازها را نصب کنید و فایل bot.py را اجرا کنید
 
 برای تست ابتدایی برنامه فایل course-9-final-project/evaluation/testset.csv را تکمیل کنید
+
+برای شخصی سازی برنامه میتوانید فایل های course-9-final-project/src/config.py و course-9-final-project/src/generation/prompt.py را تغییر دهید
 
 </div>
