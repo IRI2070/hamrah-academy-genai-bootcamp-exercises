@@ -1,0 +1,12 @@
+requests
+smolagents[openai]
+openai
+python-telegram-bot
+faiss-cpu
+langchain
+langchain-openai
+langchain-community
+deepeval
+rank_bm25
+langchain_experimental
+pandas
