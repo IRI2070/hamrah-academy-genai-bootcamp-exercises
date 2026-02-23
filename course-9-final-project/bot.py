@@ -9,7 +9,7 @@ pipeline = RAGPipeline()
 async def start(update, context):
     chat_id = str(update.effective_chat.id)
     pipeline.reset_session(chat_id)
-    await update.message.reply_text("سلام! یک سؤال دارویی بپرس.")
+    await update.message.reply_text("سلام! یک سؤال بپرس.")
 
 
 async def answer(update, context):
