@@ -7,5 +7,5 @@ langchain
 langchain-openai
 langchain-community
 deepeval
-langchain_experimental
+langchain-experimental
 pandas
