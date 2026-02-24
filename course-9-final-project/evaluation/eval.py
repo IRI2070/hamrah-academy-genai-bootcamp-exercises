@@ -1,13 +1,11 @@
-import os
-
 import pandas as pd
 from deepeval.evaluate import evaluate
-from deepeval.metrics import AnswerRelevancyMetric, FaithfulnessMetric
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.models import DeepEvalBaseLLM
 from deepeval.test_case import LLMTestCase
 from langchain_openai import ChatOpenAI
 from src.config import config
 from src.generation.generate import generate_answer
-from deepeval.models import DeepEvalBaseLLM
 
 
 class CustomOpenAI(DeepEvalBaseLLM):
@@ -48,7 +46,7 @@ for index, golden in testcases_df.iterrows():
 
 eval_model = ChatOpenAI(
     model=config.LLM_AS_A_JUDGE_MODEL,
-    api_key=os.getenv('AVALAI_API_KEY'),
+    api_key=config.API_KEY,
     base_url=config.BASE_URL
 )
 
